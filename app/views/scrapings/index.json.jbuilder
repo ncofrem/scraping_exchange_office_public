@@ -1,0 +1,1 @@
+json.array! @scrapings, partial: 'scrapings/scraping', as: :scraping

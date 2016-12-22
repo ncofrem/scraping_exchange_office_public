@@ -1,0 +1,1 @@
+json.partial! "scrapings/scraping", scraping: @scraping

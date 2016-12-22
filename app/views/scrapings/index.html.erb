@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Scrapings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Scraping</th>
+      <th>Position</th>
+      <th>Exchange office</th>
+      <th>Money</th>
+      <th>Form</th>
+      <th>Price type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @scrapings.each do |scraping| %>
+      <tr>
+        <td><%= scraping.scraping %></td>
+        <td><%= scraping.position %></td>
+        <td><%= scraping.exchange_office.name %></td>
+        <td><%= scraping.money.name %></td>
+        <td><%= scraping.form ? scraping.form.name : "" %></td>
+        <td><%= scraping.price_type.name %></td>
+        <td><%= link_to 'Show', scraping %></td>
+        <td><%= link_to 'Edit', edit_scraping_path(scraping) %></td>
+        <td><%= link_to 'Destroy', scraping, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Scraping', new_scraping_path %>

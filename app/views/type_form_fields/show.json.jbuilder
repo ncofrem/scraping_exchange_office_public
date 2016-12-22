@@ -1,0 +1,1 @@
+json.partial! "type_form_fields/type_form_field", type_form_field: @type_form_field

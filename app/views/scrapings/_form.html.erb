@@ -1,0 +1,41 @@
+<%= form_for(@scraping) do |f| %>
+  <% if @scraping.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@scraping.errors.count, "error") %> prohibited this scraping from being saved:</h2>
+
+      <ul>
+      <% @scraping.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :scraping %><br>
+    <%= f.text_field :scraping %>
+  </div>
+  <div class="field">
+    <%= f.label :position %><br>
+    <%= f.number_field :position %>
+  </div>
+  <div class="field">
+    <%= f.label :exchange_office_id %><br>
+    <%= f.select :exchange_office_id, options_for_select(ExchangeOffice.all.map{|c|[c.name, c.id]}) %>
+  </div>
+  <div class="field">
+    <%= f.label :money_id %><br>
+    <%= f.select :money_id, options_for_select(Money.all.map{|c|[c.name, c.id]}) %>
+  </div>
+  <div class="field">
+    <%= f.label :form_id %><br>
+    <%= f.select :form_id, options_for_select(Form.all.map{|c|[c.name, c.id]}) %>
+  </div>
+  <div class="field">
+    <%= f.label :price_type_id %><br>
+    <%= f.select :price_type_id, options_for_select(PriceType.all.map{|c|[c.name, c.id]}) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

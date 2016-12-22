@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CasaDeCambio</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<ul>
+	<li><%= link_to 'Principal', root_path %></li>
+	<li><%= link_to 'Scraping', controller: "scrapings" %></li>
+	<li><%= link_to 'Casas de Cambio', controller: "exchange_offices" %></li>
+	<li><%= link_to 'Monedas', controller: "money" %></li>
+	<li><%= link_to 'Precios', controller: "prices" %></li>
+	<li><%= link_to 'Tipo Precio', controller: "price_types" %></li>
+	<li><%= link_to 'Formulario', controller: "forms" %></li>
+	<li><%= link_to 'Campo Formulario', controller: "form_fields" %></li>
+	<li><%= link_to 'Tipo Campo Formulario', controller: "type_form_fields" %></li>
+</ul>
+
+<%= yield %>
+
+</body>
+</html>

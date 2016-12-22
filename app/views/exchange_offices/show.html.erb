@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @exchange_office.name %>
+</p>
+
+<p>
+  <strong>Url page:</strong>
+  <%= @exchange_office.url_page %>
+</p>
+
+<p>
+  <strong>Scrapping done:</strong>
+  <%= @exchange_office.scraping_done %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @exchange_office.message %>
+</p>
+
+<%= link_to 'Edit', edit_exchange_office_path(@exchange_office) %> |
+<%= link_to 'Back', exchange_offices_path %>

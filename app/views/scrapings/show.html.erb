@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Scraping:</strong>
+  <%= @scraping.scraping %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @scraping.position %>
+</p>
+
+<p>
+  <strong>Exchange office:</strong>
+  <%= @scraping.exchange_office %>
+</p>
+
+<p>
+  <strong>Money:</strong>
+  <%= @scraping.money %>
+</p>
+
+<p>
+  <strong>Form:</strong>
+  <%= @scraping.form %>
+</p>
+
+<p>
+  <strong>Price type:</strong>
+  <%= @scraping.price_type %>
+</p>
+
+<%= link_to 'Edit', edit_scraping_path(@scraping) %> |
+<%= link_to 'Back', scrapings_path %>

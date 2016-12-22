@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  price: 1.5
+  date: 2016-12-06
+  money_id: 
+  exchange_office_id: 
+  price_type_id: 
+
+two:
+  price: 1.5
+  date: 2016-12-06
+  money_id: 
+  exchange_office_id: 
+  price_type_id: 

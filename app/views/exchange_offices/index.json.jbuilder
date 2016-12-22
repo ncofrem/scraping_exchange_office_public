@@ -1,0 +1,1 @@
+json.array! @exchange_offices, partial: 'exchange_offices/exchange_office', as: :exchange_office

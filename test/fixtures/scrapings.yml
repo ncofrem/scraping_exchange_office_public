@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  scraping: MyString
+  position: 1
+  exchange_office_id: 
+  money_id: 
+  form_id: 
+  price_type_id: 
+
+two:
+  scraping: MyString
+  position: 1
+  exchange_office_id: 
+  money_id: 
+  form_id: 
+  price_type_id: 

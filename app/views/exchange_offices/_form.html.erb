@@ -1,0 +1,33 @@
+<%= form_for(@exchange_office) do |f| %>
+  <% if @exchange_office.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@exchange_office.errors.count, "error") %> prohibited this exchange_office from being saved:</h2>
+
+      <ul>
+      <% @exchange_office.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :url_page %><br>
+    <%= f.text_field :url_page %>
+  </div>
+  <div class="field">
+    <%= f.label :scraping_done %><br>
+    <%= f.check_box :scraping_done %>
+  </div>
+  <div class="field">
+    <%= f.label :message_id %><br>
+    <%= f.text_field :message_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

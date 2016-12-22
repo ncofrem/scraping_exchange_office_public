@@ -1,0 +1,1 @@
+json.array! @type_form_fields, partial: 'type_form_fields/type_form_field', as: :type_form_field

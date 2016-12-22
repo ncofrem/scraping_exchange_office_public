@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Exchange Offices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Url page</th>
+      <th>Message</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @exchange_offices.each do |exchange_office| %>
+      <tr>
+        <td><%= link_to exchange_office.name, "/" + exchange_office.name %></td>
+        <td><%= exchange_office.url_page %></td>
+        <td><%= exchange_office.message %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to "Mejores Precios", "/best_prices"%> <br>
+<%= link_to "Primer Scraping", "/main/scraping_done", method: :post %> <br>
+<%= link_to "Segundo Scraping", "/main/scraping_not_done", method: :post %> <br>
+<%= link_to "Replicar Precios", "/main/replicate_price", method: :post %> <br>
+<%= link_to "Eliminar Scraping", "/main/destroy_scraping", method: :post %>

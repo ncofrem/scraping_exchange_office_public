@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @form_field.name %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @form_field.value %>
+</p>
+
+<p>
+  <strong>Exist:</strong>
+  <%= @form_field.exist %>
+</p>
+
+<p>
+  <strong>Type form field:</strong>
+  <%= @form_field.type_form_field %>
+</p>
+
+<p>
+  <strong>Form:</strong>
+  <%= @form_field.form %>
+</p>
+
+<%= link_to 'Edit', edit_form_field_path(@form_field) %> |
+<%= link_to 'Back', form_fields_path %>

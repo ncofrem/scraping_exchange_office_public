@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Exchange Offices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Url page</th>
+      <th>Scrapping done</th>
+      <th>Message</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @exchange_offices.each do |exchange_office| %>
+      <tr>
+        <td><%= exchange_office.name %></td>
+        <td><%= exchange_office.url_page %></td>
+        <td><%= exchange_office.scraping_done %></td>
+        <td><%= exchange_office.message %></td>
+        <td><%= link_to 'Show', exchange_office %></td>
+        <td><%= link_to 'Edit', edit_exchange_office_path(exchange_office) %></td>
+        <td><%= link_to 'Destroy', exchange_office, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Exchange office', new_exchange_office_path %>
