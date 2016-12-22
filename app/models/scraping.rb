@@ -26,7 +26,6 @@ class Scraping < ActiveRecord::Base
   			begin
 	
 	  			if scraping.form
-            next
   					doc = mechanize_scraping(exchange_office.url_page, scraping.form)
   				end
           
