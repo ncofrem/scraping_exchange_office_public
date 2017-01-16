@@ -4,7 +4,6 @@ Base del programa que realiza Scraping a las casas de cambio.
 
 Ejecute:
 
-```
-$ rake db:migrate
-$ rake db:seed
-```
+* $ rake db:migrate
+
+* $ rake db:seed
